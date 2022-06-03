@@ -23,12 +23,11 @@ export function getInterviewersForDay(state, day) {
 
 
 export function getInterview(state, interview) {
-  let output = {};
-  if (!interview) return null;
-  const fixedInterviewer = state.interviewers[interview.interviewer];
-  output.student = interview.student;
-  output.interviewer = fixedInterviewer;
- return output;
+  if(!interview) return null;
+  const result = {
+    student: interview.student,
+    interviewer: state.interviewers[interview.interviewer]
+  };
+  return result;
 
-  
 }
