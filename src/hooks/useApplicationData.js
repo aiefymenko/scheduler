@@ -30,8 +30,11 @@ export default function useApplicationData() {
       ...state.appointments, 
       [id]: appointment
     };
+    const days = updateSpots(state, appointments, id);
+    
+
     return axios.put(`/api/appointments/${id}`, {interview})
-    .then(() => {setState({...state, appointments})});
+    .then(() => {setState({...state, appointments, days})});
   }
 
   function cancelInterview(id) {
@@ -43,10 +46,37 @@ export default function useApplicationData() {
       ...state.appointments, 
       [id]: appointment
     };
+    const days = updateSpots(state, appointments, id);
+    console.log(days);
+
     return axios.delete(`/api/appointments/${id}`)
-    .then(() => {setState({...state, appointments})});
+    .then(() => {setState({...state, appointments, days})});
+    
   }
-  const setDay = day => setState({ ...state, day });
+
+  const getSpotsForDay = function (day, appointments) {
+    let spots = 0;
+
+    for (let id of day.appointments) {
+      const appointment = appointments[id];
+      if (!appointment.interview) {
+        spots++;
+      }
+    } return spots;
+  }
+
+  const updateSpots = function (state, appointments, id) {
+
+    const dayObj = state.days.find (day => day.name === state.day); //finding and object with assigned day
+    const spots = getSpotsForDay(dayObj, appointments);
+
+    const newDays = state.days.map (day => day.name === state.day ? {...dayObj, spots} : day )
+    
+    return newDays;
+  }
+  
+  const setDay = day => setState({ ...state, day});
+
 
   return {state, setDay, bookInterview, cancelInterview}
   
