@@ -61,7 +61,7 @@ Catching an error if any
 
 E2E testing for Appointment component using Cypress
 
-!["E2E testing"](./docs/hE2E%20appointment%20component.png)
+!["E2E testing"](./docs/E2E%20appointment%20component.png)
 
 Integreted testing for components
 
