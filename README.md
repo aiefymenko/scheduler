@@ -10,22 +10,18 @@ Interview Scheduler is a single-page application (SPA) that allows users to book
 
 ## Dependencies
 
-  axios
-  @testing-library/react-hooks
-  react-test-renderer
-  any other Node packages you may have installed if you implemented stretch or extra features
-    - axios 0.27.2,
-    - classnames 2.2.6,
-    - normalize.css 8.0.1,
-    - react 16.9.0,
-    - react-dom 16.9.0,
-    - react-hooks-testing-library 0.6.0,
+    - axios 0.27.2
+    - classnames 2.2.6
+    - normalize.css 8.0.1
+    - react 16.9.0
+    - react-dom 16.9.0
+    - react-hooks-testing-library 0.6.0
     - react-scripts 3.0.0
-    - storybook 5.0.10",
-    - testing-library/jest-dom 4.0.0,
-    - testing-library/react 8.0.7,
-    - node-sass npm:sass@1.49.7,
-    - prop-types 15.8.1,
+    - storybook 5.0.10
+    - testing-library/jest-dom 4.0.0
+    - testing-library/react 8.0.7
+    - node-sass npm:sass@1.49.7
+    - prop-types 15.8.1
     - react-test-renderer 16.14.0
 
 ## Setup
