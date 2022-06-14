@@ -54,3 +54,15 @@ npm run storybook
 List of appointments
 
 !["List of appointments"](./docs/Created%20appointment%20and%20final%20look.png)
+
+Catching an error if any
+
+!["Catching an error if any"](./docs/Catching%20an%20error%20if%20any.png)
+
+E2E testing for Appointment component using Cypress
+
+!["E2E testing"](./docs/hE2E%20appointment%20component.png)
+
+Integreted testing for components
+
+!["Integrated testing](./docs/Integrating%20testing%20for%20components.png)
