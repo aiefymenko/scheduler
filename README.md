@@ -53,4 +53,4 @@ npm run storybook
 ## Screenshots
 List of appointments
 
-!["List of appointments"]([./docs/Created%20appointment%20and%20final%20look.png])
+!["List of appointments"](./docs/Created%20appointment%20and%20final%20look.png)
