@@ -1,5 +1,3 @@
-import { put } from "request";
-
 const fixtures = {
   days: [
     {

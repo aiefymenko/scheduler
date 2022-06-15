@@ -47,7 +47,6 @@ export default function useApplicationData() {
       [id]: appointment
     };
     const days = updateSpots(state, appointments, id);
-    console.log(days);
 
     return axios.delete(`/api/appointments/${id}`)
     .then(() => {setState({...state, appointments, days})});
